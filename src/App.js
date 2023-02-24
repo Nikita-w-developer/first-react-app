@@ -16,7 +16,7 @@ function App() {
             <img src="/img/adidas.png" alt="adidas" />
             <h1><span>Stan Smith</span>,<br />
               Forever!</h1>
-            <Button className="banner_button" text="Купить"/>
+            <Button className="banner_button" text="Купитьь"/>
           </div>
           <div className="right_banner_part">
             <img src="/img/bg_top.jpg" alt="main_bg" />
