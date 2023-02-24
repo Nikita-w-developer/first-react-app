@@ -1,0 +1,33 @@
+.banner_button {
+
+    width: 177.46px;
+    height: 47.09px;
+    margin-left: 60px;
+    border: none;
+    background: #A5D364;
+    border-radius: 110px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+    &:hover {
+        box-shadow: -10px -3px -3px -3px rgba(0, 0, 255, .2);
+    }
+    
+}
+
+.cart_button {
+    width: 325px;
+    height: 55px;
+    background: #9DD558;
+    border: none;
+    border-radius: 18px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+}

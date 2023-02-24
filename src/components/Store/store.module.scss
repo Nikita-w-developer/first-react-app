@@ -1,0 +1,33 @@
+.products {
+    margin-top: 45px;
+    
+    &__descr {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 36px;
+        h2 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 39px;
+        }
+        
+    }
+    &__search {
+        display: flex;
+        
+        input {
+            background: url(../../../public/img/icons/search.svg) no-repeat 18px center;
+            width: 250px;
+            height: 45px;
+            border: 1px solid #F3F3F3;
+            border-radius: 10px;
+            padding-left: 46px;
+            outline: none;
+        }
+    }
+    .cards_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

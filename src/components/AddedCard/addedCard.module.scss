@@ -1,0 +1,57 @@
+.added-card-item {
+    margin: 0 auto; 
+    max-width: 325px;
+    border: 1px solid #F3F3F3;
+    border-radius: 20px;
+    padding: 20px 20px 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    .sneaker {
+        width: 70px;
+        height: 70px;
+    }
+    .descr_wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 60px;
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-right: 12px;
+        width: 150px;
+        p {
+            margin: 0;
+        }
+        .sneaker-title {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+        }
+        .number_coast {
+            margin-top: 8px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+    }
+    .plus_button {
+        width: 32px;
+        height: 32px;
+        border: 1px solid #DBDBDB;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+            box-shadow: -5px -1.5px -1.5px -1.5px rgba(0, 0, 255, .2);
+            transform: translateY(-3px);
+        }
+        
+        img {
+            display: block;
+            transform: rotate(45deg);
+        }
+    }
+}

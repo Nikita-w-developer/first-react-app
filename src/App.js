@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import Store from "./components/Store";
+import Button from "./components/Button";
+import Cart from "./components/Cart";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <Cart />
+      <div className="wrapper">
+        <Header />
+        <hr />
+        <div className="main_banner">
+          <div className="left_banner_part">
+            <img src="/img/adidas.png" alt="adidas" />
+            <h1><span>Stan Smith</span>,<br />
+              Forever!</h1>
+            <Button className="banner_button" text="Купить"/>
+          </div>
+          <div className="right_banner_part">
+            <img src="/img/bg_top.jpg" alt="main_bg" />
+          </div>
+        </div>
+        <Store />
+      </div>
     </div>
   );
 }

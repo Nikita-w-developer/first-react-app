@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    font-family: 'Inter',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    .main {
+        padding: 85px;
+        background: #E5E5E5;
+        .wrapper {
+            background: #FFFFFF;
+            border-radius: 20px;
+            hr {
+                border: 1px solid #EAEAEA;
+            }
+            .main_banner {
+                    display: flex;
+                    margin: 0 auto;
+                    justify-content: space-between;
+                    background: #F4EFE9;
+                    border-radius: 20px;
+                    width: 90%;
+                    height: 300px;
+                    margin-top: 45px;
+                    .left_banner_part {
+                        position: relative;
+                        width: 320px;
+                        img {
+                            position: absolute;
+                            top: 16px;
+                            left: 20px;
+                        }
+                        h1 {
+                            margin-left: 61px;
+                            margin-top: 88px;
+                            width: 240.55px;
+                            height: 102.55px;
+                            font-weight: 700;
+                            font-size: 38px;
+                            line-height: 46px;
+                            span {
+                                color: #8BB43C;
+                            }
+                        }
+                    }
+                    .right_banner_part {
+                        
+                        width: 640px;
+                    }
+                }
+            
+        }
+    }
+    .container {
+        padding: 0 60px;
+    }
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+@import url(/src/components/AddedCard/addedCard.module.scss);
+@import url(/src/components/Header/header.module.scss);
+@import url(/src/components/Cart/cart.module.scss);
+@import url(/src/components/Button/button.module.scss);
+@import url(/src/components/Card/card.module.scss);
+@import url(/src/components/Store/store.module.scss);
