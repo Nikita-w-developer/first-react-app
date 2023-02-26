@@ -1,6 +1,9 @@
 import "./header.module.scss"
+import React from "react"
 
-function Header() {
+function Header(props) {
+    
+
     return (
         <header className="header">
             <div className="left-part">
@@ -11,7 +14,7 @@ function Header() {
                 </div>
             </div>
             <ul className="right-part">
-                <li>
+                <li onClick={props.onCartOpen} >
                     <img src="/img/icons/cart.svg" alt="cart" />
                     <span className="balance">1205 руб.</span>
                 </li>

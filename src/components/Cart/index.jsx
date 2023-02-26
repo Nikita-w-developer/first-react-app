@@ -1,32 +1,23 @@
 import AddedCard from "../AddedCard"
 import Button from "../Button"
 
-const obj = {
-    image: "/img/sneaker9.jpg",
-    descr: "sneaker9",
-    title: "Мужские Кроссовки Nike Lebron XVIII Low",
-    coast: "13 999 руб."
-}
-function Cart() {
+function Cart(props) {
     return (
         <div className="overlay">
             <div className="cart">
                 <div className="top">
                     <h3>Корзина</h3>
-                    <hr></hr>
+                    <img onClick={props.isClose} src="/img/icons/plus.svg" alt="plus" />
                 </div>
+                <hr></hr>
                 <div className="middle">
-                    <AddedCard {...obj} />
-                    <AddedCard {...obj} />
-                    <AddedCard {...obj} />
-                    <AddedCard {...obj} />
-                    <AddedCard {...obj} />
+                    {props.itemsInCart.map((el) => <AddedCard {...el}/>)}
                 </div>
                 <div className="bottom">
                     <div className="text_wrapper">
                         <div>
                             <p>Итого: </p>
-                            <b>21 498 руб.</b>
+                            <b>21 999 руб.</b>
                         </div>
                         <div>
                             <p>Налог 5%: </p>
