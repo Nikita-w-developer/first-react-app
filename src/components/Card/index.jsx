@@ -1,23 +1,29 @@
 import "./card.module.scss"
 import React from "react"
 
-function Card({ image, descr, title, coast, add }) {
+function Card({ saveAdding, image, descr, title, coast, saveFavorite, favorite, onClickFavorite }) {
     const [isAdded, setIsAdded] = React.useState(false)
     const [isFavourite, setIsFavourite] = React.useState(false)
 
+
     const onClickAdd = () => {
-        add({ image, descr, title, coast})
-        setIsAdded(!isAdded)
-        
+            saveAdding({ image, descr, title, coast })
+            setIsAdded(!isAdded)
     }
     const onFavourite = () => {
-        setIsFavourite(!isFavourite)
+        if ( isFavourite || favorite) {
+            onClickFavorite()
+            setIsFavourite(false)
+        } else {
+            saveFavorite({ image, descr, title, coast })
+            setIsFavourite(!isFavourite)        
+        }
     }
     return (
         <div className="card-item">
             <div className="img__wrapper">
                 <div className="favourite-block">
-                    <img onClick={onFavourite} className="favourite" src={isFavourite ? "/img/icons/favourite_fill.svg" : "/img/icons/favourite.svg"} alt="favourite" />
+                    <img onClick={onFavourite} className="favourite" src={isFavourite || favorite ? "/img/icons/favourite_fill.svg" : "/img/icons/favourite.svg"} alt="favourite" />
                 </div>
                 <img className="sneaker" src={image} alt={descr} />
             </div>
@@ -27,7 +33,7 @@ function Card({ image, descr, title, coast, add }) {
                     <p className="text_coast">Цена:</p>
                     <p className="number_coast">{coast} руб.</p>
                 </div>
-                <img onClick={onClickAdd} src={isAdded ? "/img/icons/sucsess.svg" : "/img/icons/plus.svg"} alt={isAdded ? "sucsess" : "plus"} />
+                <img onClick={onClickAdd} src={(isAdded) ? "/img/icons/sucsess.svg" : "/img/icons/plus.svg"} alt={isAdded ? "sucsess" : "plus"} />
             </div>
         </div>
     )

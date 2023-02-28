@@ -1,0 +1,23 @@
+.favorite {
+    margin-top: 45px;
+
+    &__descr {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 36px;
+
+        h2 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 39px;
+        }
+
+    }
+
+
+    .cards_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
