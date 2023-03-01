@@ -1,7 +1,7 @@
 import "./card.module.scss"
 import React from "react"
 
-function Card({ saveAdding, image, descr, title, coast, saveFavorite, favorite, onClickFavorite }) {
+function Card({ saveAdding, image, descr, title, coast, saveFavorite, onClickFavorite, preFavorite, removeFromFavorite }) {
     const [isAdded, setIsAdded] = React.useState(false)
     const [isFavourite, setIsFavourite] = React.useState(false)
 
@@ -11,8 +11,9 @@ function Card({ saveAdding, image, descr, title, coast, saveFavorite, favorite, 
             setIsAdded(!isAdded)
     }
     const onFavourite = () => {
-        if ( isFavourite || favorite) {
+        if ( isFavourite || preFavorite ) {
             onClickFavorite()
+            removeFromFavorite({ image, descr, title, coast })
             setIsFavourite(false)
         } else {
             saveFavorite({ image, descr, title, coast })
@@ -23,7 +24,7 @@ function Card({ saveAdding, image, descr, title, coast, saveFavorite, favorite, 
         <div className="card-item">
             <div className="img__wrapper">
                 <div className="favourite-block">
-                    <img onClick={onFavourite} className="favourite" src={isFavourite || favorite ? "/img/icons/favourite_fill.svg" : "/img/icons/favourite.svg"} alt="favourite" />
+                    <img onClick={onFavourite} className="favourite" src={isFavourite || preFavorite ? "/img/icons/favourite_fill.svg" : "/img/icons/favourite.svg"} alt="favourite" />
                 </div>
                 <img className="sneaker" src={image} alt={descr} />
             </div>

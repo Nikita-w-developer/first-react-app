@@ -3,7 +3,7 @@ import Card from "../../components/Card"
 import "./favorite.module.scss"
 
 
-function Favorite({ saveAdding, isAddedToFavorites, removeFromFavorite, saveFavorite }) {
+function Favorite({ saveAdding, isAddedToFavorites, saveFavorite, removeFromFavorite }) {
     const [favorite, setFavorite] = React.useState(true)
 
     return (
@@ -13,7 +13,7 @@ function Favorite({ saveAdding, isAddedToFavorites, removeFromFavorite, saveFavo
                     <h2>Добавлено в избранное</h2>
                 </div>
                 <div className="cards_wrapper">
-                    {isAddedToFavorites.map((item, index) => <Card key={index} {...item} saveAdding={saveAdding} onRemove={removeFromFavorite} saveFavorite={saveFavorite} favorite={favorite} onClickFavorite={() => setFavorite(!favorite)} />)}
+                    {isAddedToFavorites.map((item, index) => <Card key={index} {...item} saveAdding={saveAdding} removeFromFavorite={removeFromFavorite}  saveFavorite={saveFavorite} preFavorite={favorite} onClickFavorite={() => setFavorite(!favorite)}  />)}
                 </div>
             </div>
         </section>
